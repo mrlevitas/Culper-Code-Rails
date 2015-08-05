@@ -22,7 +22,7 @@ class DecryptController < ApplicationController
 				word.gsub!(/\S+/, culper_code_hash)
 			else 
 				# non dictionary word mapping
-				word.tr!("efghijabcdomnpqrkluvwxyzst","abcdefghijklmnopqrstuvwxyz")
+				word.tr!("efghijabcdomnpqrkluvwxyzstEFGHIJABCDOMNPQRKLUVWXYZST","abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
 			end
 		end
 

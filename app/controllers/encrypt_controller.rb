@@ -60,7 +60,7 @@ require "lemmatizer"
 		# word is not found in dictionary and is not a number
 		else
 			# non dictionary word mapping/cipher
-			word = word1.tr("abcdefghijklmnopqrstuvwxyz", "efghijabcdomnpqrkluvwxyzst")
+			word = word1.tr("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "efghijabcdomnpqrkluvwxyzstEFGHIJABCDOMNPQRKLUVWXYZST")
 			encrypted_arr << word
 		end
 	end

@@ -1,20 +1,88 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Roman Levitas">
+    <!-- <link rel="icon" href=".\favicon.ico"> -->
+    <%= favicon_link_tag 'favicon.ico' %>
+
+    <title>Culper Code</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="jumbotron-narrow.css" rel="stylesheet"> -->
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- // <script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+       <!--  <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">About</a></li>
+            <li role="presentation"><a href="#">Contact</a></li>
+          </ul>
+        </nav> -->
+        <h1 class="text-muted">Code Your Revolution</h1>
+      </div>
+
+      <div class="jumbotron">
+        <h2>Place text to encrypt below:</h2>
+        
+        <%= form_for @encrypt_text, url: { action: "create" }  do |f| %>  
+  		<div class="field"> 
+  			<%= f.label :encrypt_text %><br> 
+    		<%= f.text_area :encrypted %><br> 
+  		</div> 
+  		<div class="btn btn-lg btn-success" role="button"> 
+    		<%= f.submit "Submit" %> 
+  		</div> 
+ 		<% end %>
+      </div>
 
 
-<html>
-<body>
-	<h2>Place text to encrypt below:</h2>
 
-   <%= form_for @encrypt_text, url: { action: "create" }  do |f| %>  
-  <div class="field"> 
-  	<%= f.label :encrypt_text %><br> 
-    <%= f.text_area :encrypted %><br> 
-  </div> 
-  <div class="actions"> 
-    <%= f.submit "Submit" %> 
-  </div> 
- <% end %>
+  
+      <div class="row marketing">
+    
+  		<div class="col-sm-2"><%=image_tag("launchacademylogo.png")%></div>
+  		
+  		<div class="col-sm-8">
+  			<font color="#C8C8C8">
+			<h4>created by: Roman Levitas</h4>
+          	<p>This page was created as a submission for the Launch Academy winter cohort scholarship.</p>
+          	
+		</div>
+  		
+  		<div class="col-sm-2"></div>
 
-</body>
+
+      	<footer class="footer">
+      		<font color="#C8C8C8">
+        		<p>&copy; mrlevitas</p>
+      		</footer>
+      </div>
+   
+
+    </div> <!-- /container -->
+
+  </body>
 </html>
- 
