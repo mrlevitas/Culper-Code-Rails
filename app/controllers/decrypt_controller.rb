@@ -21,7 +21,7 @@ class DecryptController < ApplicationController
 			elsif culper_code_hash[word]
 				word.gsub!(/\S+/, culper_code_hash)
 			else 
-				# non dictionary word mapping
+				# non dictionary word mapping (supports capital letters as well)
 				word.tr!("efghijabcdomnpqrkluvwxyzstEFGHIJABCDOMNPQRKLUVWXYZST","abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
 			end
 		end
