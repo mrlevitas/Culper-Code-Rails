@@ -1,0 +1,4 @@
+/home/vagrant/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20150810-2656-19t2fq3.rb extconf.rb
+creating Makefile
+
+Text file busy @ unlink_internal - ./siteconf20150810-2656-19t2fq3.rb
