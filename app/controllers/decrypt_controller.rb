@@ -1,7 +1,7 @@
 class DecryptController < ApplicationController
 	 
 
-	def new
+  def new
 		@decrypt_text = Dmessage.new
   end
   
@@ -9,7 +9,8 @@ class DecryptController < ApplicationController
 
 	  @decrypt_text = Dmessage.new(decrypt_params) 
 
-	  culper_code_hash = CulperDict.where(crypt: "decrypt").all.map(&:culper_hash)[0]
+	  puts "\n\n\n\nLOGS MAFUCKA!!"
+	  p culper_code_hash = CulperDict.where(crypt: "decrypt").all.map(&:culper_hash)[0]
 
 		decrypt_me_arr = @decrypt_text.decrypted.split(" ")
 
