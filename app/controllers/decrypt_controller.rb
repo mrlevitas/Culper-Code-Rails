@@ -10,7 +10,7 @@ class DecryptController < ApplicationController
 	  @decrypt_text = Dmessage.new(decrypt_params) 
 
 	  puts "\n\n\n\nLOGS MAFUCKA!!"
-	  culper_code_hash = CulperDict.first[0] #where(crypt: "decrypt").all.map(&:culper_hash)[0]
+	  culper_code_hash = CulperDict.first()[0] #where(crypt: "decrypt").all.map(&:culper_hash)[0]
 	  # culper_code_hash =  CulperDict.find_by_sql("SELECT * FROM culper_dicts WHERE crypt = 'decrypt' ")[0]
 		puts "balls 1 walls" + culper_code_hash.inspect
 		# puts "\n\n\n\nLOGS MAFUCKA!!"
