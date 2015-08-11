@@ -11,7 +11,7 @@ class DecryptController < ApplicationController
 
 	  puts "\n\n\n\nLOGS MAFUCKA!!"
 	  # p culper_code_hash = CulperDict.where(crypt: "decrypt").all.map(&:culper_hash)[0]
-	  p culper_code_hash =  CulperDict.find_by_sql("SELECT * FROM culper_dicts WHERE crypt = 'decrypt' ")[0]
+	  culper_code_hash =  CulperDict.find_by_sql("SELECT * FROM culper_dicts WHERE crypt = 'decrypt' ")[0]
 		decrypt_me_arr = @decrypt_text.decrypted.split(" ")
 
 		decrypt_me_arr.each do |word|
