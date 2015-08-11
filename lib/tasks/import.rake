@@ -7,7 +7,7 @@ task :import, [:filename] => :environment do
 culper_code_hash_enc = {}
 culper_code_hash_dec = {}
 
-Culper = File.open('CulperCodesCSV')
+Culper = File.open('.\CulperCodesCSV.csv')
 # p CulperKey.columns.map(&:name)
 	CSV.foreach(Culper) do |row|
 	    number, word = row
