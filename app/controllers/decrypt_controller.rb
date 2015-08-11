@@ -9,7 +9,7 @@ class DecryptController < ApplicationController
 
 	  @decrypt_text = Dmessage.new(decrypt_params) 
 
-	  culper_code_hash = CulperDict.where(crypt: "decrypt").pluck(:culper_hash)[0]
+	  culper_code_hash = CulperDict.where(crypt: "decrypt").pluck(:culper_hash)#[0]
 
 		decrypt_me_arr = @decrypt_text.decrypted.split(" ")
 
