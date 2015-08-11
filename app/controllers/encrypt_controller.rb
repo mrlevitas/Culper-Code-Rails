@@ -9,11 +9,7 @@ require "lemmatizer"
 
 	@encrypt_text = Emessage.new(encrypt_params) 
 
-	puts "\n\n\n\nLOGS MAFUCKA!!"
-	# p culper_code_hash = CulperDict.where(crypt: "encrypt").all.map(&:culper_hash)[0]
 	culper_code_hash = CulperDict.where(crypt: "encrypt").pluck(:culper_hash)[0]
-	# culper_code_hash =  CulperDict.find_by_sql("SELECT * FROM culper_dicts WHERE crypt = 'encrypt' ")[0]
-	puts culper_code_hash.inspect
 
 
 	lem = Lemmatizer.new
