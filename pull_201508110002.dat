@@ -1,0 +1,1 @@
+{"klass":"Taps::Pull","database_url":"postgres://vagrant:password@localhost/my_database_production","remote_url":"http://mrlevitas:password@localhost:5000","session_uri":"/sessions/3461919244","stream_state":{},"completed_tables":[],"table_filter":null,"remote_tables_info":{"schema_migrations":200,"culper_dicts":200,"dmessages":200,"emessages":200}}
